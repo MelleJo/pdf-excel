@@ -20,11 +20,11 @@ def pdf_to_excel(pdf_file):
 
 st.title('PDF -> Excel')
 
-uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
+uploaded_file = st.file_uploader("Upload een pdf bestand", type="pdf")
 
 if uploaded_file is not None:
     excel_file = pdf_to_excel(uploaded_file)
-    st.download_button(label="Download Excel file",
+    st.download_button(label="Download Excel bestand",
                        data=excel_file,
-                       file_name="converted.xlsx",
+                       file_name="excelbestand.xlsx",
                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
